@@ -9,8 +9,8 @@ RUN apt-get update &&   \
       git
 
 RUN useradd         \
-      --create-home \
       --groups sudo \
+      --shell /bin/bash \
       code
 RUN adduser code sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
