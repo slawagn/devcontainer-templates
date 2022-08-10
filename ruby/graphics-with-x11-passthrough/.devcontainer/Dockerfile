@@ -19,7 +19,7 @@ RUN sudo apt-get install -y \
       libsdl2-mixer-dev     \
       libsdl2-ttf-dev
 
-WORKDIR /workspaces/tinyrenderer-ruby
+# WORKDIR /workspaces/project-name
 
-COPY Gemfile Gemfile.lock ./
-RUN bundle install
+# COPY Gemfile Gemfile.lock ./
+# RUN bundle install
