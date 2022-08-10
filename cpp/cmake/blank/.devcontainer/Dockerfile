@@ -1,4 +1,4 @@
-# same code can be found in debian/blank/Dockerfile 
+# Same code can be found in cpp/make/blank
 FROM debian:stable
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -16,7 +16,11 @@ RUN adduser code sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER code
 
-# Installing Cmake and Make
+RUN sudo apt-get install -y \
+      build-essential       \
+      gdb
+
+# Installing Cmake
 RUN sudo apt-get install -y  \
       gpg                    \
       wget
