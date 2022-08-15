@@ -4,8 +4,7 @@
 	"name":       "Existing Dockerfile",
 	"context":    "..",
 	"dockerFile": "Dockerfile",
-  "postCreateCommand": "(bundle init 2> /dev/null || true) && (bundle add debug || true) && (bundle add rubocop || true) && (bundle add solargraph || true)",
-  "postAttachCommand": "bundle install; solargraph bundle",
+  "postAttachCommand": "(bundle init) && (bundle add debug solargraph rubocop) && (solargraph bundle)",
   "customizations": {
     "vscode": {
       "extensions": [
