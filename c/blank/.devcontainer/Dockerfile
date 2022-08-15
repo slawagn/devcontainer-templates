@@ -9,8 +9,8 @@ RUN apt-get update &&   \
       git
 
 RUN useradd             \
-      --groups sudo     \
       --create-home     \
+      --groups sudo     \
       --shell /bin/bash \
       code
 RUN adduser code sudo

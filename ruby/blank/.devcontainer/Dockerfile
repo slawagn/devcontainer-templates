@@ -5,6 +5,7 @@ RUN apt-get update &&   \
       sudo
 
 RUN useradd             \
+      --create-home     \
       --groups sudo     \
       --shell /bin/bash \
       code

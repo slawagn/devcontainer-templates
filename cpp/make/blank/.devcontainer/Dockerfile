@@ -9,6 +9,7 @@ RUN apt-get update &&   \
       git
 
 RUN useradd             \
+      --create-home     \
       --groups sudo     \
       --shell /bin/bash \
       code
